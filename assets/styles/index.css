@@ -1,0 +1,96 @@
+* {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+}
+@font-face {
+  font-family: Cerebi Sans;
+  src: url(../fonts/Cerebri-Sans-Regular.ttf);
+}
+
+.container {
+  width: 375px;
+  margin: auto;
+  border: 1px solid;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 210px;
+}
+
+.profile-complete-img {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-complete-img img {
+  height: 64px;
+  width: 64px;
+}
+
+.sub-container {
+  display: grid;
+  height: 100%;
+}
+.sub-content {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.sub-content h1 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "PT Serif", serif;
+  color: #0f241b;
+  line-height: 32px;
+  padding: 0px 18px 0px 18px;
+}
+
+.sub-content p {
+  margin-top: 12px;
+  line-height: 24px;
+  font-size: 16px;
+  font-family: Cerebi Sans;
+  padding: 0px 18px 0px 18px;
+  color: #1d352a;
+}
+
+.go-home {
+  padding: 0 24px 0 24px;
+  margin-bottom: 48px;
+}
+
+.go-home-btn {
+  width: 100%;
+  padding: 12px 0px 12px 0px;
+  border-radius: 32px;
+  color: white;
+  background-color: #03a84e;
+  font-family: Cerebi Sans;
+  outline: none;
+  font-size: 16px;
+}
+
+.confetti img {
+  position: absolute;
+  top: -20px;
+  animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(30vh);
+    opacity: 0;
+  }
+}
+
+
