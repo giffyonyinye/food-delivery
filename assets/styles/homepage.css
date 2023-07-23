@@ -279,6 +279,16 @@
   background-color: rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
+  /* opacity: 0; */
+    /* pointer-events: none;
+    transition: opacity 0.3s ease; */
+}
+
+.modal-background.show {
+  /* opacity: 1; */
+  /* Set opacity to 1 when the modal is shown */
+  /* pointer-events: auto; */
+  /* Enable interaction when the modal is shown */
 }
 
 @media (max-width: 670px) {
@@ -292,13 +302,32 @@
 .modal-content {
   background-color: #fff;
   padding: 20px;
-  width: 320px;
+  width: 325px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   height: fit-content;
   margin-top: 7rem;
   border-radius: 16px;
   padding-bottom: 4rem;
+  transform: scale(0.2);
+     opacity: 0;
+   animation: fadeInScale 0.4s ease forwards; 
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width:678px) {
+  .modal-content {
+    width: 330px;
+  }
+    .cleaning-modal-content {
+    width: 330px;
+    }
 }
 
 .cleaning-modal-content {
@@ -311,6 +340,16 @@
   margin-top: 2rem;
   border-radius: 16px;
   padding-bottom: 4rem;
+  transform: scale(0.2);
+    opacity: 0;
+    animation: fadeOutScale 0.4s ease-out forwards;
+}
+
+@keyframes fadeOutScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .close-button {
