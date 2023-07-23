@@ -271,32 +271,16 @@
   position: fixed;
   backdrop-filter: blur(1.3px);
   top: 0;
-  left: 35.3%;
-  width: 377px;
+  left: 50%;
+  width: 390px;
+  max-width: 100%;
   margin: auto;
   height: 100%;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
-  /* opacity: 0; */
-    /* pointer-events: none;
-    transition: opacity 0.3s ease; */
-}
-
-.modal-background.show {
-  /* opacity: 1; */
-  /* Set opacity to 1 when the modal is shown */
-  /* pointer-events: auto; */
-  /* Enable interaction when the modal is shown */
-}
-
-@media (max-width: 670px) {
-  .modal-background {
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
+  transform: translateX(-50%);
 }
 
 .modal-content {
