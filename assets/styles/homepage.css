@@ -12,15 +12,25 @@
 .container {
   width: 375px;
   margin: auto;
-  padding-top: 35px;
-  height: 100vh;
+  /* padding-top: px; */
   font-family: Cerebi Sans;
-  border: 1px solid black;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.static-header {
+  position: fixed;
+  width: 335px;
+  background-color: white;
+  top: 0;
+  padding-top: 24px;
+  z-index: 10;
 }
 
 .home-container {
+  height: 100vh;
   padding: 16px;
-  /* overflow-y: scroll; */
+  overflow: scroll;
+  padding-top: 8rem;
 }
 
 .nav-container {
@@ -204,11 +214,12 @@
 }
 
 .cleaner-container {
-  height: 192px;
+  height: 177px;
   border-radius: 8px;
   border: 1px solid #ffc260;
   margin-top: 24px;
   background-color: #fffbf5;
+  margin-bottom: 12rem;
 }
 
 .cleaner-header {
@@ -258,6 +269,7 @@
 .modal-background {
   display: none;
   position: fixed;
+  backdrop-filter: blur(1.3px);
   top: 0;
   left: 35.3%;
   width: 377px;
@@ -283,20 +295,22 @@
   width: 320px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  height: 570px;
+  height: fit-content;
   margin-top: 7rem;
   border-radius: 16px;
+  padding-bottom: 4rem;
 }
 
 .cleaning-modal-content {
-    background-color: #fff;
-    padding: 20px;
-    width: 320px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    height: 656px;
-    margin-top: 2rem;
-    border-radius: 16px;
+  background-color: #fff;
+  padding: 20px;
+  width: 320px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: fit-content;
+  margin-top: 2rem;
+  border-radius: 16px;
+  padding-bottom: 4rem;
 }
 
 .close-button {
@@ -326,11 +340,7 @@
   height: 32px;
 }
 
-.order-status p {
-  font-size: 12px;
-}
-
-.order-status h6 {
+.clean-text {
   font-size: 16px;
   color: #0f241b;
 }
@@ -339,17 +349,17 @@
   margin-top: 20px;
   padding: 12px;
   border: 1px dashed #cbd8d2;
-border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .cleaner-details {
-    padding: 12px;
-        border-bottom: 1px dashed #cbd8d2;
-        border-left: 1px dashed #cbd8d2;
-        border-right: 1px dashed #cbd8d2;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
+  padding: 12px;
+  border-bottom: 1px dashed #cbd8d2;
+  border-left: 1px dashed #cbd8d2;
+  border-right: 1px dashed #cbd8d2;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .address-title {
@@ -364,69 +374,93 @@ border-top-left-radius: 8px;
 }
 
 .arrived {
-    display: flex;
-    margin-top: 32px;
-    justify-content: space-between;
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
 }
 .way {
-    display: flex;
-        justify-content: space-between;
-        margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
 }
 .cleaning {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
 }
 
 .arrived-img {
-    display: flex;
+  display: flex;
 }
 
 .arrived h3 {
-    padding-left: 13px;
+  padding-left: 13px;
+  font-size: 16px;
 }
 
 .arrived-content {
-    border-left: 1px dashed #6ECE8A;
-    padding-left: 22px;
-    margin-left: 8px;
-    padding-top: 4px;
-    padding-bottom: 30px;
-    font-size: 14px;
+  border-left: 2px dashed #6ece8a;
+  padding-left: 22px;
+  margin-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 30px;
+  font-size: 14px;
 }
 .clean {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .cleaning-content {
-    border-left: 1px dashed #6ECE8A;
-    padding-left: 24px;
-    font-size: 14px;
-    margin-left: 8px;
-    padding-top: 4px;
-    padding-bottom: 30px;
+  border-left: 2px dashed #6ece8a;
+  padding-left: 24px;
+  font-size: 14px;
+  margin-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 30px;
 }
 
 .way-content {
-    padding-left: 28px;
-    margin-left: 8px;
-    padding-top: 4px;
-    font-size: 14px;
+  padding-left: 28px;
+  margin-left: 8px;
+  font-size: 14px;
 }
 
 .time {
-    color:  #4B6358;
-        font-size: 12px;
+  color: #4b6358;
+  font-size: 12px;
 }
 
-                                    
 .way-img {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .cleaning-img {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+.blur-background {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
+  height: 100%;
+  
+  filter: blur(100);
+  /* Adjust the blur intensity as needed */
+  z-index: 1;
+  /* Set the z-index to be behind the modal but above other content */
 }
