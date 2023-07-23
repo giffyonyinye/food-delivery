@@ -112,9 +112,9 @@
         </div>
 
         <!-- ********* START FOOD DELIVERY MODAL************** -->
-        <div class="modal-background" id="modalBackground" onclick="closeModal()">
+        <div class="modal-background" id="modalBackground" >
             <div class="modal-content" id="modalContent">
-                <!-- <span class="close-button" onclick="closeModal()">&times;</span> -->
+               
                 <div>
                     <div class="date">
                         <p>Mon, 08 Sep 2021</p>
@@ -165,12 +165,12 @@
 
 
         <!-- ********* START CLEANING MODAL************** -->
-        <div class="modal-background" id="cleaningModalBackground" onclick="closeCleaningModal()">
+        <div class="modal-background" id="cleaningModalBackground" >
             <div class="cleaning-modal-content" id="modalContent">
                 <div>
                     <div class="date">
                         <p>Mon, 08 Sep 2021</p>
-                        <img id="modalClose"  src="/assets/images/Close.svg" alt="">
+                        <img onclick="closeCleaningModal()" id="modalClose"  src="/assets/images/Close.svg" alt="">
                     </div>
                     <div class="order-status">
                         <img src="/assets/images/image 4.png" alt="">
