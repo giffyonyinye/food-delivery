@@ -269,7 +269,7 @@
 .modal-background {
   display: none;
   position: fixed;
-  backdrop-filter: blur(1.3px);
+  backdrop-filter: blur(1.5px);
   top: 0;
   left: 50%;
   width: 390px;
@@ -281,6 +281,9 @@
   justify-content: center;
   align-items: center;
   transform: translateX(-50%);
+  -webkit-backdrop-filter: blur(1.5px);
+    -moz-backdrop-filter: blur(1.5px);
+    -o-backdrop-filter: blur(1.5px);
 }
 
 .modal-content {
@@ -334,6 +337,10 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.date img {
+  cursor: pointer;
 }
 
 .close-button {
